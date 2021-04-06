@@ -1,0 +1,9 @@
+- name: Set execution permission to database script
+  file:
+    path: "{{host}}/{{host}}.sh"
+    mode: "u+x"
+
+- name: Execute database script
+  become: yes
+  become_user: root
+  shell: "{{host}}.sh '~/.env'"

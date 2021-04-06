@@ -1,0 +1,14 @@
+- name: Set execution permission to general script
+  file:
+    path: "general.sh"
+    mode: "u+x"
+
+- name: Execute general script
+  become: yes
+  become_user: root
+  shell: "general.sh"
+
+- name: Execute specific yml
+  become: yes
+  become_user: root
+  shell: "ansible-paybook {{host}}/{{host}}.yml --extra-vars 'host={{host}}'"
