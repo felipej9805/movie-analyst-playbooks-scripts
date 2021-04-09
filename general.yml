@@ -7,8 +7,8 @@
         path: "~/movie-analyst-playbooks-scripts/add_env_var.sh"
         mode: "u+x"
 
-    - name: Execute general script
-        path: "~/movie-analyst-playbooks-scripts/add_env_var.sh"
+    - name: Execute add variables script
+      shell: "~/movie-analyst-playbooks-scripts/add_env_var.sh"
 
     - name: Set execution permission to general script
       file:
