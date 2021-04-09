@@ -2,6 +2,14 @@
   gather_facts: false
   hosts: localhost
   tasks:
+    - name: Set execution permission to add script env
+      file:
+        path: "~/movie-analyst-playbooks-scripts/add_env_var.sh"
+        mode: "u+x"
+
+    - name: Execute general script
+        path: "~/movie-analyst-playbooks-scripts/add_env_var.sh"
+
     - name: Set execution permission to general script
       file:
         path: "~/movie-analyst-playbooks-scripts/general.sh"
