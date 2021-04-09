@@ -1,5 +1,5 @@
 #!/bin/bash
-filename=$1
+filename="/home/ubuntu/.env"
 n=1
 while read line; do
 echo "export ${line}" >> .bashrc
