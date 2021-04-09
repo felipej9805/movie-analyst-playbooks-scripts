@@ -1,7 +1,7 @@
 echo 'Export variables from .env file...'
 set -o allexport; . ~/.env; set +o allexport
-. .bashrc
-. .profile
+. /home/ubuntu/.bashrc
+. /home/ubuntu/.profile
 echo 'Read variable host ...'
 env_path=$1
 container_name="backend_host"
