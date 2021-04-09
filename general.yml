@@ -8,7 +8,7 @@
         mode: "u+x"
 
     - name: Execute add variables script
-      shell: "~/movie-analyst-playbooks-scripts/add_env_var.sh /home/ubuntu/.env"
+      shell: "~/movie-analyst-playbooks-scripts/add_env_var.sh"
 
     - name: Set execution permission to general script
       file:
