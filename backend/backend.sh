@@ -7,7 +7,7 @@ env_path=$1
 container_name="backend_host"
 
 echo 'Building image...'
-docker build --build-arg PORT \
+sudo docker build --build-arg PORT \
 --build-arg DB_HOST \
 --build-arg DB_USER \
 --build-arg DB_PASS \
