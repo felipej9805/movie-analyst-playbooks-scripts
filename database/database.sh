@@ -18,7 +18,8 @@ echo 'Starting run database Container...'
 echo '################################################################################'
 sudo docker rm -f $container_name > /dev/null 2>&1
 sudo docker run -d -p 3306:3306 --name $container_name --mount source=db-data,target=/var/lib/mysql 9805/mydatabase
-
+sudo docker exec -it $container_name bash -c "skip-grant-tables >> /etc/mysql/mysql.conf.d/mysqld.cnf"
+sudo docker restart $container_name
 echo 'Adding script to automatic restart containers...'
 echo '################################################################################'
 sudo install -m 777 /dev/null /etc/rc.local
