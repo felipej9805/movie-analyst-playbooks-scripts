@@ -4,7 +4,7 @@ set -o allexport; . ~/.env; set +o allexport
 . /home/ubuntu/.profile
 
 echo 'Building image...'
-docker build --build-arg MYSQL_ROOT_PASSWORD -t 9805/mydatabase /home/ubuntu/movie-analyst-api/data_model/Dockerfile
+docker build --build-arg MYSQL_ROOT_PASSWORD -t 9805/mydatabase /home/ubuntu/movie-analyst-api/data_model/
 
 echo 'Read variable host ...'
 env_path=$1

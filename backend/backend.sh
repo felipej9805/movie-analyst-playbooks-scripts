@@ -11,7 +11,7 @@ docker build --build-arg PORT \
 --build-arg DB_HOST \
 --build-arg DB_USER \
 --build-arg DB_PASS \
---build-arg DB_NAME -t 9805/mybackend /home/ubuntu/movie-analyst-api/Dockerfile
+--build-arg DB_NAME -t 9805/mybackend /home/ubuntu/movie-analyst-api/
 
 echo 'Starting run backend Container...'
 echo '################################################################################'
