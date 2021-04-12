@@ -7,5 +7,5 @@ echo "export ${line}" >> /home/ubuntu/.profile
 
 n=$((n+1))
 done < $filename
-. .bashrc
-. .profile
+. /home/ubuntu/.bashrc
+. /home/ubuntu/.profile
