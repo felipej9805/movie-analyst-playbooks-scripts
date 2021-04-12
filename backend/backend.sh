@@ -7,11 +7,11 @@ env_path=$1
 container_name="backend_host"
 
 echo 'Building image...'
-sudo docker build --build-arg PORT \
---build-arg DB_HOST \
---build-arg DB_USER \
---build-arg DB_PASS \
---build-arg DB_NAME -t 9805/mybackend /home/ubuntu/movie-analyst-api/
+sudo docker build --build-arg PORT=${PORT} \
+--build-arg DB_HOST=${DB_HOST} \
+--build-arg DB_USER=${DB_USER} \
+--build-arg DB_PASS=${DB_PASS} \
+--build-arg DB_NAME=${DB_NAME} -t 9805/mybackend /home/ubuntu/movie-analyst-api/
 
 echo 'Starting run backend Container...'
 echo '################################################################################'
